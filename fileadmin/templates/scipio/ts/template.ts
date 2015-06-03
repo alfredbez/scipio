@@ -1,7 +1,7 @@
 ##### Basis Defintionen
 config {
   extTarget = _blank
-  noPageTitle = 1
+  noPageTitle = 2
   spamProtectEmailAddresses = 2
   spamProtectEmailAddresses_atSubst = <span style="display: none;">noSpam</span>@
   baseURL = http://project-scipio.org/typo3/
@@ -59,8 +59,13 @@ page{
     X-UA-Compatible.httpEquivalent = 1
   }
   headerData {
-    1 = TEXT
-    1.value = <meta name="TYPO3-Entwicklung-durch" content="Alfred Bez" />
+    10 = TEXT
+    10.value = <meta name="TYPO3-Entwicklung-durch" content="Alfred Bez" />
+    20 = TEXT
+    20 {
+      field = subtitle // title
+      noTrimWrap = |<title>Project Scipio - |</title>|
+    }
   }
   includeCSS {
     file1 = {$paths.template}{$paths.css}style.min.css
