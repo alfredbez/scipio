@@ -28,36 +28,6 @@
 			<div class="header">
 				<h3>{newsItem.title}</h3>
 			</div>
-			<div class="footer">
-				<p>
-					<!-- date -->
-					<span class="news-list-date">
-						<time datetime="{f:format.date(date:newsItem.datetime,format:'Y-m-d')}">
-							<n:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</n:format.date>
-						</time>
-					</span>
-
-					<f:if condition="{newsItem.categories}">
-						<f:render partial="Category/Items" arguments="{categories:newsItem.categories, settings:settings}" />
-					</f:if>
-
-					<f:if condition="{newsItem.tags}">
-						<!-- Tags -->
-						<span class="news-list-tags">
-						<f:for each="{newsItem.tags}" as="tag">
-							{tag.title}
-						</f:for>
-						</span>
-					</f:if>
-
-					<f:if condition="{newsItem.author}">
-						<!-- author -->
-						<span class="news-list-author" itemscope itemtype="http://data-vocabulary.org/Person">
-							<f:translate key="author_simple" /> <span itemprop="name">{newsItem.author}</span>
-						</span>
-					</f:if>
-				</p>
-			</div>
 
 			<f:if condition="{newsItem.teaser}">
 				<!-- teaser -->
@@ -86,26 +56,6 @@
 						<f:translate key="back-link" />
 					</f:link.page>
 				</div>
-			</f:if>
-
-			<f:if condition="{settings.detail.showSocialShareButtons}">
-				<div class="facebook">
-					<div class="like">
-						<n:social.facebook.like></n:social.facebook.like>
-					</div>
-					<div class="share">
-						<n:social.facebook.share />
-					</div>
-					<div class="twitter">
-						<n:social.twitter>Twitter</n:social.twitter>
-					</div>
-				</div>
-			</f:if>
-
-			<f:if condition="{settings.detail.disqusShortname}">
-				<n:social.disqus newsItem="{newsItem}"
-								 shortName="{settings.detail.disqusShortname}"
-								 link="{n:link(newsItem:newsItem,settings:settings,uriOnly:1,configuration:'{forceAbsoluteUrl:1}')}" />
 			</f:if>
 
 			<!-- related things -->
