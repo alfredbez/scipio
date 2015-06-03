@@ -1,0 +1,36 @@
+<nav class="top-bar hide-for-large-up" data-topbar>
+    <ul class="title-area">
+        <li class="name">
+            <h1 class="scipio-logo">
+                <a href="index.php">
+                    <img src="/typo3/fileadmin/templates/scipio/assets/img/logo.svg">
+                </a>
+            </h1>
+        </li>
+        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon">
+            <a href="#">
+                <span>Menu</span>
+            </a>
+        </li>
+    </ul>
+
+    <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+            <f:cObject typoscriptObjectPath="lib.navigation" />
+        </ul>
+    </section>
+</nav>
+<div class="row full-width">
+    <div class="large-navi show-for-large-up large-2 columns">
+        <div class="large-navi__logo scipio-logo">
+            <a href="index.php">
+                <img src="/typo3/fileadmin/templates/scipio/assets/img/logo90.svg">
+            </a>
+        </div>
+        <ul class="side-nav">
+            <f:cObject typoscriptObjectPath="lib.navigation" />
+        </ul>
+    </div>
+    <div id="content" class="large-8 small-12 columns">
