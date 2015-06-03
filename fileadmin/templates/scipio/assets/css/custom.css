@@ -44,3 +44,57 @@ li.previous:before {
 li.previous:hover:before {
     left: -20px;
 }
+.news-backlink-wrap a,
+a.more {
+    padding: 5px;
+    position: relative;
+    padding-right: 2px;
+    transition: all 0.3s;
+}
+.news-backlink-wrap a:before,
+a.more:before {
+    display: block;
+    content: "";
+}
+.news-backlink-wrap a:after,
+a.more:after {
+    display: block;
+    position: absolute;
+    width: 110%;
+    left: -6%;
+    height: 2px;
+    bottom: 4px;
+    background: #000;
+    transition: all 0.3s;
+    content: "";
+}
+.news-backlink-wrap a:hover:after,
+a.more:hover:after {
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+}
+.article__images {
+    margin-top: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 10px;
+}
+.article__images img {
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 1px;
+    border-radius: 3px;
+}
+.large-navi {
+    position: fixed;
+    top: 0;
+}
+@media only screen 
+  and (max-width: 40em) {
+    .news-single .article .news-img-wrap {
+        float: none;
+        margin: 0;
+        max-width: 100%;
+    }
+    .news .article .news-img-wrap img {
+        max-width: 100%;
+    }
+}
