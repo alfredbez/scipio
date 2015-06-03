@@ -8,10 +8,10 @@ config {
   sys_language_uid = 0
   language = en
   locale_all = en_EN.UTF8
-  compressJs = 0
-  compressCss = 0
-  concatenateJs = 0
-  concatenateCss = 0
+  compressJs = 1
+  compressCss = 1
+  concatenateJs = 1
+  concatenateCss = 1
 }
 tt_content.stdWrap.dataWrap >
 lib.parseFunc_RTE.nonTypoTagStdWrap.encapsLines >
@@ -48,7 +48,7 @@ page{
     disablePrefixComment = 1
     metaCharset = UTF-8
     sys_language_overlay = hideNonTranslated
-    no_cache = 1
+    no_cache = 0
     simulateStaticDocuments = 0
     tx_realurl_enable = 1
     uniqueLinkVars = 1
