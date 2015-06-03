@@ -1,19 +1,26 @@
 ## News Templates
-plugin.tx_news.view {
-  layoutRootPath = fileadmin/templates/scipio/ext/news/Layouts/
-  partialRootPath = fileadmin/templates/scipio/ext/news/Partials/
-  templateRootPath = fileadmin/templates/scipio/ext/news/Templates/
+plugin.tx_news {
 
-        settings.list.paginate {
-                itemsPerPage = 3
-                insertAbove = false
-                insertBelow = TRUE
-                lessPages = TRUE
-                forcedNumberOfLinks = 5
-                pagesBefore = 2
-                pagesAfter = 2
-            }
+	view {
+	  layoutRootPath = fileadmin/templates/scipio/ext/news/Layouts/
+	  partialRootPath = fileadmin/templates/scipio/ext/news/Partials/
+	  templateRootPath = fileadmin/templates/scipio/ext/news/Templates/
+	}
+
+  settings {
+	  list.paginate {
+	    itemsPerPage = 3
+	    insertAbove = false
+	    insertBelow = TRUE
+	    lessPages = TRUE
+	    forcedNumberOfLinks = 5
+	    pagesBefore = 2
+	    pagesAfter = 2
+	  }
+	  detail.showSocialShareButtons = 0
+	}
 }
+
 content.RTE_compliant = 0
 
 paths {
